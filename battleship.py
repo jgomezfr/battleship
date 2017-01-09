@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-import getch
-
-def getInput():
-	return getch.getinput()
+import keyboardInput
 
 def updateData(keystroke):
 	pass
@@ -16,9 +13,9 @@ if __name__ == "__main__":
 	# or get keyboard input
 	while True:
 		# get keyboard input
-		keystroke = getInput()
-		print(keystroke)
+		key = keyboardInput.get()
+		print(key)
 		# update data
-		graphicsData = updateData(keystroke)
+		graphicsData = updateData(key)
 		# refresh screen
 		display(graphicsData)
