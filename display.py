@@ -3,12 +3,16 @@
 def clearScreen():
 	print("\033[1;1H\033[2J\033[3J")
 
-def drawBoard(board):
+def drawBoard(board,cursor):
 	print(" ▁▁▁▁▁▁▁▁▁▁ ")
-	for row in board:
+	for row in range(len(board)):
 		rowDisplayString = "▕"
-		for col in row:
-			if col == 0:
+		for col in range(len(board[0])):
+			if cursor != None:
+				if row == cursor[0] and col == cursor[1]:
+					rowDisplayString+="◎"
+					continue
+			if board[row][col] == 0:
 				rowDisplayString+=" "
 			else:
 				rowDisplayString+="●"
@@ -16,10 +20,10 @@ def drawBoard(board):
 		print(rowDisplayString)
 	print(" ▔▔▔▔▔▔▔▔▔▔ ")	
 
-def drawScreen(topBoard,bottomBoard):
+def drawScreen(topBoard,bottomBoard,cursor):
 	clearScreen()
-	drawBoard(topBoard)
-	drawBoard(bottomBoard)
+	drawBoard(topBoard,cursor)
+	drawBoard(bottomBoard,None)
 
 	# print(" ▁▁▁▁▁▁▁▁▁▁ ")
 	# print("▕          ▏")

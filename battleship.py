@@ -25,11 +25,12 @@ if __name__ == "__main__":
 			display.playerTwoSplash()
 		# get keyboard input
 		key = keyboardInput.get()
+		target = [4,4]
 		
 		# update data
 		graphicsData = updateData(key)
 		# refresh screen
-		display.drawScreen(emptyBoard,emptyBoard)
+		display.drawScreen(emptyBoard,emptyBoard,target)
 		keyboardInput.get()
 
 		turnCounter += 1
