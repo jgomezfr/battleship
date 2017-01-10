@@ -4,7 +4,7 @@ def clearScreen():
 	print("\033[1;1H\033[2J\033[3J")
 
 def drawBoard(board,cursor):
-	print(" ▁▁▁▁▁▁▁▁▁▁ ")
+	print(" ▁▁▁▁▁▁▁▁▁▁▁ ")
 	for row in range(len(board)):
 		rowDisplayString = "▕"
 		for col in range(len(board[0])):
@@ -16,9 +16,9 @@ def drawBoard(board,cursor):
 				rowDisplayString+=" "
 			else:
 				rowDisplayString+="●"
-		rowDisplayString+="▏"	
+		rowDisplayString+= "▕"
 		print(rowDisplayString)
-	print(" ▔▔▔▔▔▔▔▔▔▔ ")	
+	print(" ▔▔▔▔▔▔▔▔▔▔▔ ")	
 
 def drawScreen(topBoard,bottomBoard,cursor):
 	clearScreen()
