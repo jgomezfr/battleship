@@ -16,7 +16,7 @@ def drawBoard(board,cursor):
 				rowDisplayString+=" "
 			else:
 				rowDisplayString+="●"
-		rowDisplayString+="▏"
+		rowDisplayString+="▏"	
 		print(rowDisplayString)
 	print(" ▔▔▔▔▔▔▔▔▔▔ ")	
 
